@@ -204,7 +204,7 @@ function Index() {
             </h2>
           </div>
 
-          <div className="mt-16 grid gap-8 md:grid-cols-3">
+          <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {pillars.map(({ icon: Icon, title, desc }) => (
               <article
                 key={title}
