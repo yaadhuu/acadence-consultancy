@@ -6,15 +6,15 @@ import {
   Lock, Mail, Linkedin, MessageCircle, ArrowRight,
 } from "lucide-react";
 import logoAsset from "@/assets/acadence-logo.asset.json";
-import heroImage from "@/assets/hero-academic.jpg";
+import heroAsset from "@/assets/hero-academic-v2.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Acadence — Premium Academic Writing Services" },
-      { name: "description", content: "Ethical, precise, rigorously researched academic writing. Seven years of proven expertise in dissertations, research papers, editing and more." },
-      { property: "og:title", content: "Acadence — Premium Academic Writing Services" },
-      { property: "og:description", content: "Excellence in every word. Partner with qualified academic professionals." },
+      { title: "Acadence — Advancing Academic Research & Scholarship" },
+      { name: "description", content: "Bespoke consultancy, structural editing, and research support for scholars worldwide. Backed by 7 years of rigorous academic practice." },
+      { property: "og:title", content: "Acadence — Advancing Academic Research & Scholarship" },
+      { property: "og:description", content: "Bespoke consultancy, structural editing, and research support for scholars worldwide." },
       { property: "og:image", content: logoAsset.url },
       { property: "twitter:image", content: logoAsset.url },
     ],
@@ -23,26 +23,28 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { icon: FileText, title: "Research Papers", desc: "Comprehensive, rigorously researched academic manuscripts." },
-  { icon: PenLine, title: "Assignments & Essays", desc: "High-calibre essays delivered with precision for any deadline." },
-  { icon: GraduationCap, title: "Dissertations & Theses", desc: "Expert-level structuring and writing for postgraduate research." },
-  { icon: Library, title: "Literature Reviews", desc: "In-depth, critical analyses of current academic sources and journals." },
-  { icon: Microscope, title: "Case Studies", desc: "Detailed, analytical approaches to complex case study requirements." },
-  { icon: BookOpen, title: "Editing & Proofreading", desc: "Meticulous refinement to polish your work to absolute perfection." },
-  { icon: ShieldCheck, title: "Originality Verification", desc: "Authentic content accompanied by comprehensive originality reports." },
-  { icon: Clock3, title: "Dependable Delivery", desc: "Strict adherence to your deadlines without compromising academic rigour." },
+  { icon: FileText, title: "Research Manuscripts", desc: "Comprehensive support in structuring and refining scholarly research." },
+  { icon: PenLine, title: "Academic Essays", desc: "Methodological guidance and bespoke drafting for coursework." },
+  { icon: GraduationCap, title: "Postgraduate Theses", desc: "Expert advisory on structuring complex, long-form academic arguments." },
+  { icon: Library, title: "Literature Reviews", desc: "Critical analysis and synthesis of current academic journals." },
+  { icon: Microscope, title: "Case Study Analysis", desc: "In-depth, analytical frameworks applied to complex scenarios." },
+  { icon: BookOpen, title: "Editorial Refinement", desc: "Meticulous proofreading to elevate clarity and academic tone." },
+  { icon: ShieldCheck, title: "Originality Verification", desc: "Rigorous cross-referencing to ensure complete academic integrity." },
+  { icon: Clock3, title: "Timeline Management", desc: "Strategic planning to meet your strictest submission deadlines." },
 ];
 
 const pillars = [
-  { icon: Award, title: "Over Seven Years of Expertise", desc: "Demonstrating sustained commitment to academic excellence across disciplines and institutions worldwide." },
-  { icon: CheckCircle2, title: "Rigorous Quality Assurance", desc: "Every manuscript undergoes meticulous peer-level review before delivery to ensure scholarly standards." },
-  { icon: Scale, title: "Commitment to Academic Integrity", desc: "Ethical research and bespoke writing without compromise — authored to your brief, never resold." },
+  { icon: Award, title: "Sustained Expertise", desc: "7+ years of dedicated academic support across diverse disciplines." },
+  { icon: CheckCircle2, title: "Rigorous Quality Control", desc: "Every manuscript undergoes thorough peer-level editorial review." },
+  { icon: Scale, title: "Ethical Practice", desc: "Bespoke consultancy strictly authored to your brief, never resold." },
+  { icon: Lock, title: "Protected Privacy", desc: "Your identity, institutional affiliation, and data remain strictly confidential." },
 ];
 
 const trustItems = [
-  { icon: Award, label: "Established Industry Experience" },
-  { icon: ShieldCheck, label: "Uncompromising Originality" },
-  { icon: Lock, label: "Strict Confidentiality Protocols" },
+  { icon: Scale, label: "Academic Integrity Assured" },
+  { icon: Award, label: "Subject-Matter Specialists" },
+  { icon: Clock3, label: "Strict Deadline Adherence" },
+  { icon: Lock, label: "Discreet & Confidential" },
 ];
 
 function Index() {
@@ -97,24 +99,23 @@ function Index() {
       <section id="top" className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
         <div className="container-prose grid items-center gap-14 lg:grid-cols-[1.1fr_1fr]">
           <div className="fade-up">
-            <p className="eyebrow">Your Partner in Academic Excellence</p>
+            <p className="eyebrow">A Scholarly Consultancy</p>
             <span className="hairline mt-5 mb-6" />
             <h1 className="font-serif text-4xl leading-[1.08] text-navy sm:text-5xl lg:text-6xl">
-              Premium Academic <span className="italic text-gold">Writing</span> Services
+              Advancing Academic <span className="italic text-gold">Research</span> & Scholarship
             </h1>
             <p className="mt-6 font-serif text-xl italic text-navy/80 sm:text-2xl">
-              Backed by Seven Years of Proven Academic Expertise.
+              Bespoke consultancy, structural editing, and research support for scholars worldwide.
             </p>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              We provide ethical, precise, and rigorously researched academic content tailored to your specific
-              objectives. Partner with qualified professionals to elevate your scholarly endeavours.
+              Backed by 7 years of rigorous academic practice.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-5">
               <a
                 href="#contact"
                 className="group inline-flex h-14 items-center gap-3 rounded-md bg-navy px-8 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-all hover:bg-gold hover:text-navy"
               >
-                Arrange a Consultation
+                Discuss Your Research
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
               <a href="#services" className="text-sm font-semibold uppercase tracking-wider text-navy underline-offset-8 hover:text-gold hover:underline">
@@ -127,10 +128,10 @@ function Index() {
             <div className="absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-to-br from-gold/15 to-navy/10 blur-2xl" />
             <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_60px_-20px_rgba(0,31,63,0.35)] ring-1 ring-navy/10">
               <img
-                src={heroImage}
-                alt="Open book, fountain pen and academic journals on a navy desk"
-                width={1536}
-                height={1280}
+                src={heroAsset.url}
+                alt="Scholarly desk with academic volumes, fountain pen and research manuscript"
+                width={1732}
+                height={1628}
                 className="aspect-[5/4] w-full object-cover"
               />
             </div>
@@ -144,7 +145,7 @@ function Index() {
 
       {/* TRUST STRIP */}
       <section className="border-y border-border bg-offwhite">
-        <div className="container-prose grid gap-8 py-10 md:grid-cols-3 md:py-12">
+        <div className="container-prose grid gap-8 py-10 md:grid-cols-2 lg:grid-cols-4 md:py-12">
           {trustItems.map(({ icon: Icon, label }) => (
             <div key={label} className="flex items-center justify-center gap-4 text-center md:justify-start md:text-left">
               <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-gold/12 text-gold">
@@ -203,7 +204,7 @@ function Index() {
             </h2>
           </div>
 
-          <div className="mt-16 grid gap-8 md:grid-cols-3">
+          <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {pillars.map(({ icon: Icon, title, desc }) => (
               <article
                 key={title}
@@ -232,13 +233,13 @@ function Index() {
         />
         <div className="container-prose relative">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">Begin the Conversation</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">Begin Your Consultation</p>
             <span className="mx-auto mt-5 block h-px w-12 bg-gold" />
             <h2 className="mt-6 font-serif text-3xl sm:text-4xl lg:text-5xl">
-              Ready to Elevate Your <span className="italic text-gold">Academic Journey?</span>
+              Begin Your <span className="italic text-gold">Consultation</span>
             </h2>
             <p className="mt-5 text-base text-primary-foreground/75 sm:text-lg">
-              Connect with our experts directly for a confidential consultation.
+              Connect directly with our specialists to outline your research requirements and methodology.
             </p>
 
             <div className="mt-12 grid gap-4 sm:grid-cols-3">
