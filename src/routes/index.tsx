@@ -23,26 +23,28 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { icon: FileText, title: "Research Papers", desc: "Comprehensive, rigorously researched academic manuscripts." },
-  { icon: PenLine, title: "Assignments & Essays", desc: "High-calibre essays delivered with precision for any deadline." },
-  { icon: GraduationCap, title: "Dissertations & Theses", desc: "Expert-level structuring and writing for postgraduate research." },
-  { icon: Library, title: "Literature Reviews", desc: "In-depth, critical analyses of current academic sources and journals." },
-  { icon: Microscope, title: "Case Studies", desc: "Detailed, analytical approaches to complex case study requirements." },
-  { icon: BookOpen, title: "Editing & Proofreading", desc: "Meticulous refinement to polish your work to absolute perfection." },
-  { icon: ShieldCheck, title: "Originality Verification", desc: "Authentic content accompanied by comprehensive originality reports." },
-  { icon: Clock3, title: "Dependable Delivery", desc: "Strict adherence to your deadlines without compromising academic rigour." },
+  { icon: FileText, title: "Research Manuscripts", desc: "Comprehensive support in structuring and refining scholarly research." },
+  { icon: PenLine, title: "Academic Essays", desc: "Methodological guidance and bespoke drafting for coursework." },
+  { icon: GraduationCap, title: "Postgraduate Theses", desc: "Expert advisory on structuring complex, long-form academic arguments." },
+  { icon: Library, title: "Literature Reviews", desc: "Critical analysis and synthesis of current academic journals." },
+  { icon: Microscope, title: "Case Study Analysis", desc: "In-depth, analytical frameworks applied to complex scenarios." },
+  { icon: BookOpen, title: "Editorial Refinement", desc: "Meticulous proofreading to elevate clarity and academic tone." },
+  { icon: ShieldCheck, title: "Originality Verification", desc: "Rigorous cross-referencing to ensure complete academic integrity." },
+  { icon: Clock3, title: "Timeline Management", desc: "Strategic planning to meet your strictest submission deadlines." },
 ];
 
 const pillars = [
-  { icon: Award, title: "Over Seven Years of Expertise", desc: "Demonstrating sustained commitment to academic excellence across disciplines and institutions worldwide." },
-  { icon: CheckCircle2, title: "Rigorous Quality Assurance", desc: "Every manuscript undergoes meticulous peer-level review before delivery to ensure scholarly standards." },
-  { icon: Scale, title: "Commitment to Academic Integrity", desc: "Ethical research and bespoke writing without compromise — authored to your brief, never resold." },
+  { icon: Award, title: "Sustained Expertise", desc: "7+ years of dedicated academic support across diverse disciplines." },
+  { icon: CheckCircle2, title: "Rigorous Quality Control", desc: "Every manuscript undergoes thorough peer-level editorial review." },
+  { icon: Scale, title: "Ethical Practice", desc: "Bespoke consultancy strictly authored to your brief, never resold." },
+  { icon: Lock, title: "Protected Privacy", desc: "Your identity, institutional affiliation, and data remain strictly confidential." },
 ];
 
 const trustItems = [
-  { icon: Award, label: "Established Industry Experience" },
-  { icon: ShieldCheck, label: "Uncompromising Originality" },
-  { icon: Lock, label: "Strict Confidentiality Protocols" },
+  { icon: Scale, label: "Academic Integrity Assured" },
+  { icon: Award, label: "Subject-Matter Specialists" },
+  { icon: Clock3, label: "Strict Deadline Adherence" },
+  { icon: Lock, label: "Discreet & Confidential" },
 ];
 
 function Index() {
