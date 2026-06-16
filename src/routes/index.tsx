@@ -233,13 +233,13 @@ function Index() {
         />
         <div className="container-prose relative">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">Begin the Conversation</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">Begin Your Consultation</p>
             <span className="mx-auto mt-5 block h-px w-12 bg-gold" />
             <h2 className="mt-6 font-serif text-3xl sm:text-4xl lg:text-5xl">
-              Ready to Elevate Your <span className="italic text-gold">Academic Journey?</span>
+              Begin Your <span className="italic text-gold">Consultation</span>
             </h2>
             <p className="mt-5 text-base text-primary-foreground/75 sm:text-lg">
-              Connect with our experts directly for a confidential consultation.
+              Connect directly with our specialists to outline your research requirements and methodology.
             </p>
 
             <div className="mt-12 grid gap-4 sm:grid-cols-3">
