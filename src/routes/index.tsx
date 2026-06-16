@@ -6,15 +6,15 @@ import {
   Lock, Mail, Linkedin, MessageCircle, ArrowRight,
 } from "lucide-react";
 import logoAsset from "@/assets/acadence-logo.asset.json";
-import heroImage from "@/assets/hero-academic.jpg";
+import heroAsset from "@/assets/hero-academic-v2.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Acadence — Premium Academic Writing Services" },
-      { name: "description", content: "Ethical, precise, rigorously researched academic writing. Seven years of proven expertise in dissertations, research papers, editing and more." },
-      { property: "og:title", content: "Acadence — Premium Academic Writing Services" },
-      { property: "og:description", content: "Excellence in every word. Partner with qualified academic professionals." },
+      { title: "Acadence — Advancing Academic Research & Scholarship" },
+      { name: "description", content: "Bespoke consultancy, structural editing, and research support for scholars worldwide. Backed by 7 years of rigorous academic practice." },
+      { property: "og:title", content: "Acadence — Advancing Academic Research & Scholarship" },
+      { property: "og:description", content: "Bespoke consultancy, structural editing, and research support for scholars worldwide." },
       { property: "og:image", content: logoAsset.url },
       { property: "twitter:image", content: logoAsset.url },
     ],
