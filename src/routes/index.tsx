@@ -99,24 +99,23 @@ function Index() {
       <section id="top" className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
         <div className="container-prose grid items-center gap-14 lg:grid-cols-[1.1fr_1fr]">
           <div className="fade-up">
-            <p className="eyebrow">Your Partner in Academic Excellence</p>
+            <p className="eyebrow">A Scholarly Consultancy</p>
             <span className="hairline mt-5 mb-6" />
             <h1 className="font-serif text-4xl leading-[1.08] text-navy sm:text-5xl lg:text-6xl">
-              Premium Academic <span className="italic text-gold">Writing</span> Services
+              Advancing Academic <span className="italic text-gold">Research</span> & Scholarship
             </h1>
             <p className="mt-6 font-serif text-xl italic text-navy/80 sm:text-2xl">
-              Backed by Seven Years of Proven Academic Expertise.
+              Bespoke consultancy, structural editing, and research support for scholars worldwide.
             </p>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              We provide ethical, precise, and rigorously researched academic content tailored to your specific
-              objectives. Partner with qualified professionals to elevate your scholarly endeavours.
+              Backed by 7 years of rigorous academic practice.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-5">
               <a
                 href="#contact"
                 className="group inline-flex h-14 items-center gap-3 rounded-md bg-navy px-8 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-all hover:bg-gold hover:text-navy"
               >
-                Arrange a Consultation
+                Discuss Your Research
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
               <a href="#services" className="text-sm font-semibold uppercase tracking-wider text-navy underline-offset-8 hover:text-gold hover:underline">
@@ -129,10 +128,10 @@ function Index() {
             <div className="absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-to-br from-gold/15 to-navy/10 blur-2xl" />
             <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_60px_-20px_rgba(0,31,63,0.35)] ring-1 ring-navy/10">
               <img
-                src={heroImage}
-                alt="Open book, fountain pen and academic journals on a navy desk"
-                width={1536}
-                height={1280}
+                src={heroAsset.url}
+                alt="Scholarly desk with academic volumes, fountain pen and research manuscript"
+                width={1732}
+                height={1628}
                 className="aspect-[5/4] w-full object-cover"
               />
             </div>
