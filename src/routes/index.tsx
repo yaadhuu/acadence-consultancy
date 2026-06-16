@@ -145,7 +145,7 @@ function Index() {
 
       {/* TRUST STRIP */}
       <section className="border-y border-border bg-offwhite">
-        <div className="container-prose grid gap-8 py-10 md:grid-cols-3 md:py-12">
+        <div className="container-prose grid gap-8 py-10 md:grid-cols-2 lg:grid-cols-4 md:py-12">
           {trustItems.map(({ icon: Icon, label }) => (
             <div key={label} className="flex items-center justify-center gap-4 text-center md:justify-start md:text-left">
               <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-gold/12 text-gold">
