@@ -249,41 +249,54 @@ function Index() {
           }}
         />
         <div className="container-prose relative">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-gold">Begin Your Consultation</p>
-            <span className="mx-auto mt-5 block h-px w-12 bg-gold" />
-            <h2 className="mt-6 font-serif text-3xl sm:text-4xl lg:text-5xl">
-              Begin Your <span className="italic text-gold">Consultation</span>
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="font-serif text-3xl font-bold uppercase tracking-wide text-primary-foreground sm:text-4xl lg:text-5xl">
+              Begin Your Consultation
             </h2>
-            <p className="mt-5 text-base text-primary-foreground/75 sm:text-lg">
-              Connect directly with our specialists to outline your research requirements and methodology.
+            <h3 className="mt-5 font-serif text-xl font-semibold text-primary-foreground/95 sm:text-2xl">
+              Schedule Your Consultation
+            </h3>
+            <p className="mt-4 text-base text-primary-foreground/75 sm:text-lg">
+              Connect with Acadence for tailored academic and research solutions.
             </p>
 
-            <div className="mt-12 grid gap-4 sm:grid-cols-3">
-              <a
-                href="https://wa.me/918078578102"
-                className="group inline-flex h-14 min-h-[48px] items-center justify-center gap-3 rounded-lg bg-[#25D366] px-6 text-sm font-semibold text-white shadow-[0_10px_30px_-10px_rgba(37,211,102,0.6)] transition-all duration-300 hover:brightness-110 hover:shadow-[0_14px_36px_-10px_rgba(37,211,102,0.7)]"
-              >
-                <MessageCircle className="h-5 w-5" /> WhatsApp
-              </a>
+            <a
+              href="https://wa.me/918078578102"
+              className="group mt-8 inline-flex h-20 w-full items-center justify-center gap-3 rounded-xl bg-[#25D366] px-8 text-lg font-bold text-white shadow-[0_14px_40px_-10px_rgba(37,211,102,0.55)] transition-all duration-300 hover:brightness-110 hover:shadow-[0_18px_48px_-10px_rgba(37,211,102,0.65)]"
+            >
+              <MessageCircle className="h-7 w-7" /> Start Consultation
+            </a>
+
+            <p className="mt-4 text-sm italic text-[#6B7280]">
+              Confidential • Research-Driven • Precision-Led
+            </p>
+
+            <h4 className="mt-8 font-serif text-lg font-semibold text-primary-foreground">
+              Alternative Contact
+            </h4>
+
+            <div className="mt-4 grid gap-4 sm:grid-cols-2">
               <a
                 href="https://linkedin.com/in/yadhu-krishna-6424972bb"
                 target="_blank" rel="noreferrer"
-                className="group inline-flex h-14 min-h-[48px] items-center justify-center gap-3 rounded-lg bg-[#0A66C2] px-6 text-sm font-semibold text-white shadow-[0_10px_30px_-10px_rgba(10,102,194,0.6)] transition-all duration-300 hover:brightness-110 hover:shadow-[0_14px_36px_-10px_rgba(10,102,194,0.7)]"
+                className="group inline-flex h-12 items-center justify-center gap-3 rounded-lg bg-[#0A66C2] px-6 text-sm font-semibold text-white transition-all duration-300 hover:brightness-110"
               >
                 <Linkedin className="h-5 w-5" /> LinkedIn
               </a>
               <a
-                href="mailto:yeadhukrishna.p@gmail.com"
-                className="group inline-flex h-14 min-h-[48px] items-center justify-center gap-3 rounded-lg bg-[#6B7280] px-6 text-sm font-semibold text-white shadow-[0_10px_30px_-10px_rgba(107,114,128,0.5)] transition-all duration-300 hover:brightness-110 hover:shadow-[0_14px_36px_-10px_rgba(107,114,128,0.6)]"
+                href="mailto:support@acadenceconsultancy.com"
+                className="group inline-flex h-12 items-center justify-center gap-3 rounded-lg bg-[#6B7280] px-6 text-sm font-semibold text-white transition-all duration-300 hover:brightness-110"
               >
                 <Mail className="h-5 w-5" /> Email
               </a>
             </div>
 
-            <p className="mt-10 text-xs uppercase tracking-[0.22em] text-primary-foreground/50">
-              yeadhukrishna.p@gmail.com
-            </p>
+            <a
+              href="mailto:support@acadenceconsultancy.com"
+              className="mt-4 inline-block text-sm font-medium text-primary-foreground hover:text-gold"
+            >
+              support@acadenceconsultancy.com
+            </a>
           </div>
         </div>
       </section>
