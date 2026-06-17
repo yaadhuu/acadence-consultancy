@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Acadence — Advancing Academic Research & Scholarship" },
-      { name: "description", content: "Bespoke consultancy, structural editing, and research support for scholars worldwide. Backed by 7 years of rigorous academic practice." },
+      { name: "description", content: "Bespoke consultancy, structural editing, and research support for scholars worldwide. Backed by 7+ years of academic excellence and research-driven expertise." },
       { property: "og:title", content: "Acadence — Advancing Academic Research & Scholarship" },
       { property: "og:description", content: "Bespoke consultancy, structural editing, and research support for scholars worldwide." },
       { property: "og:image", content: logoAsset.url },
