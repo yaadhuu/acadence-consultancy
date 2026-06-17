@@ -299,10 +299,7 @@ function Index() {
                     {row.label}
                   </span>
                   <span className="text-[15px] font-normal text-[#F7F5F1]">{row.detail}</span>
-                  <span
-                    className="text-xs transition-colors group-hover:text-gold md:text-right"
-                    style={{ color: "rgba(246,244,240,0.55)" }}
-                  >
+                  <span className="text-xs text-[#F7F5F1]/55 transition-colors group-hover:text-gold md:text-right">
                     {row.action} →
                   </span>
                 </a>
