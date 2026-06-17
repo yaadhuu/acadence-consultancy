@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, Mail, MessageCircle, Linkedin } from "lucide-react";
-import logoAsset from "@/assets/acadence-logo.asset.json";
+
+const logoUrl = "/acadence-logo.jpg";
 
 export const Route = createFileRoute("/terms-of-service")({
   head: () => ({
@@ -9,8 +10,8 @@ export const Route = createFileRoute("/terms-of-service")({
       { name: "description", content: "Read the Acadence Terms of Service to understand the rules, responsibilities, and disclaimers for using our academic consultancy services." },
       { property: "og:title", content: "Terms of Service — Acadence" },
       { property: "og:description", content: "Acadence Terms of Service and user agreement." },
-      { property: "og:image", content: logoAsset.url },
-      { property: "twitter:image", content: logoAsset.url },
+      { property: "og:image", content: logoUrl },
+      { property: "twitter:image", content: logoUrl },
     ],
   }),
   component: TermsOfService,
@@ -43,7 +44,7 @@ function TermsOfService() {
       <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background">
         <nav className="container-prose flex h-20 items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="Acadence logo" className="h-11 w-11 object-contain" />
+            <img src={logoUrl} alt="Acadence logo" className="h-11 w-11 object-contain" />
             <span className="font-serif text-2xl font-semibold tracking-wide text-navy">Acadence</span>
           </Link>
           <ul className="hidden items-center gap-10 text-sm font-medium text-navy md:flex">
@@ -362,11 +363,11 @@ function TermsOfService() {
                 <ul className="mt-4 space-y-3 text-left">
                   <li>
                     <a
-                      href="mailto:support@acadenceconsultancy.com"
+                      href="mailto:acadenceconsultancy@gmail.com"
                       className="inline-flex items-center gap-2 text-navy transition-colors hover:text-gold"
                     >
                       <Mail className="h-5 w-5 text-gold" />
-                      support@acadenceconsultancy.com
+                      acadenceconsultancy@gmail.com
                     </a>
                   </li>
                   <li>
@@ -380,7 +381,7 @@ function TermsOfService() {
                   </li>
                   <li>
                     <a
-                      href="https://linkedin.com/in/yadhu-krishna-6424972bb"
+                      href="https://www.linkedin.com/company/acadence-consultancy/about/"
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center gap-2 text-navy transition-colors hover:text-gold"
@@ -421,11 +422,11 @@ function TermsOfService() {
             </div>
             <div className="flex flex-col gap-3 text-sm">
               <a
-                href="mailto:support@acadenceconsultancy.com"
+                href="mailto:acadenceconsultancy@gmail.com"
                 className="inline-flex items-center gap-2 text-navy transition-colors hover:text-gold"
               >
                 <Mail className="h-4 w-4 text-gold" />
-                support@acadenceconsultancy.com
+                acadenceconsultancy@gmail.com
               </a>
               <a
                 href="https://wa.me/918078578102"

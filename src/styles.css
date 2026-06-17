@@ -147,3 +147,11 @@
     }
   }
 }
+
+/* Hide the Lovable dev badge */
+[data-lovable-badge],
+#lovable-badge,
+.lovable-badge {
+  display: none !important;
+}
+

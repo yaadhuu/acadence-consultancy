@@ -2,12 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import {
   BookOpen, FileText, GraduationCap, Library, Microscope,
-  PenLine, ShieldCheck, Clock3, Briefcase,
-  Search, Shield, Lock, ArrowRight,
+  PenLine, ShieldCheck, Clock, Award, Scale, Lock, ArrowRight,
 } from "lucide-react";
-import logoAsset from "@/assets/acadence-logo.asset.json";
-import heroAsset from "@/assets/hero-academic-v2.asset.json";
 import { Reveal } from "@/components/Reveal";
+
+const logoUrl = "/acadence-logo.jpg";
+const heroUrl = "/hero-academic.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -16,8 +16,8 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Bespoke consultancy, structural editing, and research support for scholars worldwide. Backed by 7+ years of academic excellence and research-driven expertise." },
       { property: "og:title", content: "Acadence — Advancing Academic Research & Scholarship" },
       { property: "og:description", content: "Bespoke consultancy, structural editing, and research support for scholars worldwide." },
-      { property: "og:image", content: logoAsset.url },
-      { property: "twitter:image", content: logoAsset.url },
+      { property: "og:image", content: logoUrl },
+      { property: "twitter:image", content: logoUrl },
     ],
   }),
   component: Index,
@@ -31,21 +31,14 @@ const services = [
   { icon: Microscope, title: "Case Study Analysis", desc: "In-depth, analytical frameworks applied to complex scenarios." },
   { icon: BookOpen, title: "Editorial Refinement", desc: "Meticulous proofreading to elevate clarity and academic tone." },
   { icon: ShieldCheck, title: "Originality Verification", desc: "Rigorous cross-referencing to ensure complete academic integrity." },
-  { icon: Clock3, title: "Timeline Management", desc: "Strategic planning to meet your strictest submission deadlines." },
+  { icon: Clock, title: "Timeline Management", desc: "Strategic planning to meet your strictest submission deadlines." },
 ];
 
 const pillars = [
-  { icon: Briefcase, title: "Sustained Expertise", desc: "7+ years of dedicated academic support across diverse disciplines." },
-  { icon: Search, title: "Rigorous Quality Control", desc: "Every manuscript undergoes thorough peer-level editorial review." },
-  { icon: Shield, title: "Ethical Practice", desc: "Bespoke consultancy strictly authored to your brief, never resold." },
+  { icon: GraduationCap, title: "Sustained Expertise", desc: "7+ years of dedicated academic support across diverse disciplines." },
+  { icon: Scale, title: "Rigorous Quality Control", desc: "Every manuscript undergoes thorough peer-level editorial review." },
+  { icon: Award, title: "Ethical Practice", desc: "Bespoke consultancy strictly authored to your brief, never resold." },
   { icon: Lock, title: "Protected Privacy", desc: "Your identity, institutional affiliation, and data remain strictly confidential." },
-];
-
-const trustItems = [
-  { icon: ShieldCheck, label: "Academic Integrity Assured", tone: "navy" as const },
-  { icon: Briefcase, label: "Subject-Matter Specialists", tone: "gold" as const },
-  { icon: Clock3, label: "Strict Deadline Adherence", tone: "navy" as const },
-  { icon: Lock, label: "Discreet & Confidential", tone: "gold" as const },
 ];
 
 function Index() {
@@ -67,7 +60,7 @@ function Index() {
       >
         <nav className="container-prose flex h-20 items-center justify-between">
           <a href="#top" className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="Acadence logo" className="h-11 w-11 object-contain" />
+            <img src={logoUrl} alt="Acadence logo" className="h-11 w-11 object-contain" />
             <span className="font-serif text-2xl font-semibold tracking-wide text-navy">Acadence</span>
           </a>
           <ul className="hidden items-center gap-10 text-sm font-medium text-navy md:flex">
@@ -129,11 +122,11 @@ function Index() {
             <div className="absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-to-br from-gold/15 to-navy/10 blur-2xl" />
             <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_60px_-20px_rgba(0,31,63,0.35)] ring-1 ring-navy/10">
               <img
-                src={heroAsset.url}
+                src={heroUrl}
                 alt="Scholarly desk with academic volumes, fountain pen and research manuscript"
                 width={1732}
                 height={1628}
-                className="aspect-[5/4] w-full object-cover"
+                className="aspect-[5/4] w-[105%] max-w-none object-cover object-left-top"
               />
             </div>
             <div className="absolute -bottom-6 -left-6 hidden rounded-xl border border-border bg-card p-5 shadow-[var(--shadow-card)] sm:block">
@@ -144,30 +137,26 @@ function Index() {
         </div>
       </section>
 
-      {/* TRUST STRIP */}
-      <section className="border-y border-border bg-offwhite">
-        <div className="container-prose grid gap-5 py-10 sm:grid-cols-2 lg:grid-cols-4 md:py-12">
-          {trustItems.map(({ icon: Icon, label, tone }, i) => {
-            const isNavy = tone === "navy";
-            return (
-              <Reveal
-                key={label}
-                delay={i * 120}
-                className={`flex flex-col items-center gap-4 rounded-xl border p-5 text-center transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] ${
-                  isNavy ? "border-navy/10 bg-card" : "border-gold/20 bg-gold/[0.06]"
-                }`}
-              >
-                <span
-                  className={`grid h-14 w-14 shrink-0 place-items-center rounded-full ${
-                    isNavy ? "bg-navy/8 text-navy" : "bg-navy text-gold"
-                  }`}
-                >
-                  <Icon className="h-7 w-7" strokeWidth={1.5} />
+      {/* TRUST STRIP (REPLICATED EXACTLY AS PER USER SPECIFICATION) */}
+      <section className="border-y border-navy/5 bg-offwhite py-8">
+        <div className="container-prose">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
+            {[
+              { icon: Scale, label: "Academic Integrity Assured" },
+              { icon: Award, label: "Subject-Matter Specialists" },
+              { icon: Clock, label: "Strict Deadline Adherence" },
+              { icon: Lock, label: "Discreet & Confidential" },
+            ].map(({ icon: Icon, label }) => (
+              <div key={label} className="flex items-center gap-4 justify-start sm:justify-center lg:justify-start px-2">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold/10 border border-gold/20 text-gold">
+                  <Icon className="h-5 w-5" strokeWidth={1.5} />
                 </span>
-                <p className="font-serif text-lg text-navy">{label}</p>
-              </Reveal>
-            );
-          })}
+                <span className="font-sans text-sm font-semibold tracking-wide text-navy">
+                  {label}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -268,17 +257,17 @@ function Index() {
                 },
                 {
                   label: "Email",
-                  detail: "support@acadenceconsultancy.com",
+                  detail: "acadenceconsultancy@gmail.com",
                   action: "Send an Enquiry",
-                  href: "mailto:support@acadenceconsultancy.com",
+                  href: "mailto:acadenceconsultancy@gmail.com",
                   primary: false,
                   external: false,
                 },
                 {
                   label: "LinkedIn",
-                  detail: "Yadhu Krishna",
+                  detail: "Acadence Consultancy",
                   action: "Connect",
-                  href: "https://linkedin.com/in/yadhu-krishna-6424972bb",
+                  href: "https://www.linkedin.com/company/acadence-consultancy/about/",
                   primary: false,
                   external: true,
                 },
@@ -322,7 +311,7 @@ function Index() {
           <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
             <div>
               <div className="flex items-center gap-3">
-                <img src={logoAsset.url} alt="Acadence logo" className="h-12 w-12 object-contain" />
+                <img src={logoUrl} alt="Acadence logo" className="h-12 w-12 object-contain" />
                 <span className="font-serif text-2xl text-primary-foreground">Acadence</span>
               </div>
               <p className="mt-4 max-w-sm font-serif italic text-gold">Excellence in Every Word.</p>
@@ -349,13 +338,12 @@ function Index() {
               <ul className="mt-5 space-y-3 text-sm">
                 <li><a href="/privacy-policy" className="hover:text-gold">Privacy Policy</a></li>
                 <li><a href="/terms-of-service" className="hover:text-gold">Terms of Service</a></li>
-                <li><a href="mailto:yeadhukrishna.p@gmail.com" className="hover:text-gold">yeadhukrishna.p@gmail.com</a></li>
+                <li><a href="mailto:acadenceconsultancy@gmail.com" className="hover:text-gold">acadenceconsultancy@gmail.com</a></li>
               </ul>
             </div>
           </div>
-          <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-primary-foreground/50 md:flex-row">
+          <div className="mt-14 border-t border-white/10 pt-8 text-xs text-primary-foreground/50 text-center">
             <p>© 2026 Acadence. All rights reserved.</p>
-            <p className="uppercase tracking-[0.22em]">Crafted with scholarly precision</p>
           </div>
         </div>
       </footer>
