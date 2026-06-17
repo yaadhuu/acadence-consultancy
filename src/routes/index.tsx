@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import {
   BookOpen, FileText, GraduationCap, Library, Microscope,
   PenLine, ShieldCheck, Clock3, Briefcase,
-  Search, Shield, Lock, Mail, Linkedin, MessageCircle, ArrowRight,
+  Search, Shield, Lock, ArrowRight,
 } from "lucide-react";
 import logoAsset from "@/assets/acadence-logo.asset.json";
 import heroAsset from "@/assets/hero-academic-v2.asset.json";
@@ -240,63 +240,78 @@ function Index() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="relative overflow-hidden bg-navy py-24 text-primary-foreground md:py-32">
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.08]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 20% 20%, var(--color-gold) 0, transparent 40%), radial-gradient(circle at 80% 80%, var(--color-gold) 0, transparent 40%)",
-          }}
-        />
-        <div className="container-prose relative">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="font-serif text-3xl font-bold uppercase tracking-wide text-primary-foreground sm:text-4xl lg:text-5xl">
+      <section id="contact" className="bg-navy py-24 text-primary-foreground md:py-32">
+        <div className="container-prose">
+          <div className="mx-auto max-w-[580px] text-center">
+            <p className="text-[10px] font-semibold uppercase text-gold" style={{ letterSpacing: "0.22em" }}>
+              Get in Touch
+            </p>
+            <h2
+              className="mt-5 font-serif font-normal text-[#F7F5F1]"
+              style={{ fontSize: "clamp(2rem, 4vw, 3rem)", lineHeight: 1.15 }}
+            >
               Begin Your Consultation
             </h2>
-            <h3 className="mt-5 font-serif text-xl font-semibold text-primary-foreground/95 sm:text-2xl">
-              Schedule Your Consultation
-            </h3>
-            <p className="mt-4 text-base text-primary-foreground/75 sm:text-lg">
-              Connect with Acadence for tailored academic and research solutions.
+            <p className="mt-3 text-sm font-light" style={{ color: "rgba(246,244,240,0.55)" }}>
+              Reach out directly — all enquiries are handled with complete confidentiality.
             </p>
 
-            <a
-              href="https://wa.me/918078578102"
-              className="group mt-8 inline-flex h-20 w-full items-center justify-center gap-3 rounded-xl bg-[#25D366] px-8 text-lg font-bold text-white shadow-[0_14px_40px_-10px_rgba(37,211,102,0.55)] transition-all duration-300 hover:brightness-110 hover:shadow-[0_18px_48px_-10px_rgba(37,211,102,0.65)]"
-            >
-              <MessageCircle className="h-7 w-7" /> Start Consultation
-            </a>
-
-            <p className="mt-4 text-sm italic text-[#6B7280]">
-              Confidential • Research-Driven • Precision-Led
-            </p>
-
-            <h4 className="mt-8 font-serif text-lg font-semibold text-primary-foreground">
-              Alternative Contact
-            </h4>
-
-            <div className="mt-4 grid gap-4 sm:grid-cols-2">
-              <a
-                href="https://linkedin.com/in/yadhu-krishna-6424972bb"
-                target="_blank" rel="noreferrer"
-                className="group inline-flex h-12 items-center justify-center gap-3 rounded-lg bg-[#0A66C2] px-6 text-sm font-semibold text-white transition-all duration-300 hover:brightness-110"
-              >
-                <Linkedin className="h-5 w-5" /> LinkedIn
-              </a>
-              <a
-                href="mailto:support@acadenceconsultancy.com"
-                className="group inline-flex h-12 items-center justify-center gap-3 rounded-lg bg-[#6B7280] px-6 text-sm font-semibold text-white transition-all duration-300 hover:brightness-110"
-              >
-                <Mail className="h-5 w-5" /> Email
-              </a>
+            <div className="mt-12 text-left">
+              {[
+                {
+                  label: "WhatsApp",
+                  detail: "+91 80785 78102",
+                  action: "Start a Conversation",
+                  href: "https://wa.me/918078578102",
+                  primary: true,
+                  external: true,
+                },
+                {
+                  label: "Email",
+                  detail: "support@acadenceconsultancy.com",
+                  action: "Send an Enquiry",
+                  href: "mailto:support@acadenceconsultancy.com",
+                  primary: false,
+                  external: false,
+                },
+                {
+                  label: "LinkedIn",
+                  detail: "Yadhu Krishna",
+                  action: "Connect",
+                  href: "https://linkedin.com/in/yadhu-krishna-6424972bb",
+                  primary: false,
+                  external: true,
+                },
+              ].map((row, i) => (
+                <a
+                  key={row.label}
+                  href={row.href}
+                  {...(row.external ? { target: "_blank", rel: "noreferrer" } : {})}
+                  className={`group grid grid-cols-1 items-center gap-1 border-t py-[18px] transition-all duration-200 md:grid-cols-[140px_1fr_auto] md:gap-6 ${
+                    i === 2 ? "border-b" : ""
+                  } border-l-[3px] border-l-transparent hover:border-l-gold`}
+                  style={{ borderTopColor: "rgba(212,175,55,0.15)", ...(i === 2 ? { borderBottomColor: "rgba(212,175,55,0.15)" } : {}) }}
+                >
+                  <span
+                    className="text-[10px] font-semibold uppercase text-gold"
+                    style={{ letterSpacing: "0.18em" }}
+                  >
+                    {row.label}
+                  </span>
+                  <span className="text-[15px] font-normal text-[#F7F5F1]">{row.detail}</span>
+                  <span className="text-xs text-[#F7F5F1]/55 transition-colors group-hover:text-gold md:text-right">
+                    {row.action} →
+                  </span>
+                </a>
+              ))}
             </div>
 
-            <a
-              href="mailto:support@acadenceconsultancy.com"
-              className="mt-4 inline-block text-sm font-medium text-primary-foreground hover:text-gold"
+            <p
+              className="mt-8 text-[11px]"
+              style={{ color: "rgba(246,244,240,0.3)", letterSpacing: "0.04em" }}
             >
-              support@acadenceconsultancy.com
-            </a>
+              All enquiries are strictly confidential. We respect your academic privacy.
+            </p>
           </div>
         </div>
       </section>
