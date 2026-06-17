@@ -320,7 +320,7 @@ function Index() {
               <span className="mt-3 block h-px w-8 bg-gold" />
               <ul className="mt-5 space-y-3 text-sm">
                 <li><a href="/privacy-policy" className="hover:text-gold">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-gold">Terms of Service</a></li>
+                <li><a href="/terms-of-service" className="hover:text-gold">Terms of Service</a></li>
                 <li><a href="mailto:yeadhukrishna.p@gmail.com" className="hover:text-gold">yeadhukrishna.p@gmail.com</a></li>
               </ul>
             </div>
