@@ -208,13 +208,13 @@ function Index() {
             {pillars.map(({ icon: Icon, title, desc }) => (
               <article
                 key={title}
-                className="relative rounded-xl border border-border/60 bg-navy-tint p-8 text-center shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[var(--shadow-card-hover)]"
+                className="relative rounded-xl border border-border bg-card p-8 text-center shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[var(--shadow-card-hover)]"
               >
-                <span className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-navy/8 text-navy">
-                  <Icon className="h-12 w-12" strokeWidth={1.3} />
+                <span className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-navy text-gold">
+                  <Icon className="h-8 w-8" strokeWidth={1.3} />
                 </span>
                 <h3 className="mt-6 font-serif text-xl font-bold text-navy">{title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+                <p className="mt-3 text-sm leading-relaxed text-navy/70">{desc}</p>
               </article>
             ))}
           </div>
