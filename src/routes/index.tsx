@@ -240,15 +240,8 @@ function Index() {
       </section>
 
       {/* CONTACT */}
-      <section id="contact" className="relative overflow-hidden bg-navy py-24 text-primary-foreground md:py-32">
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.08]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 20% 20%, var(--color-gold) 0, transparent 40%), radial-gradient(circle at 80% 80%, var(--color-gold) 0, transparent 40%)",
-          }}
-        />
-        <div className="container-prose relative">
+      <section id="contact" className="bg-navy py-24 text-primary-foreground md:py-32">
+        <div className="container-prose">
           <div className="mx-auto max-w-[580px] text-center">
             <p className="text-[10px] font-semibold uppercase text-gold" style={{ letterSpacing: "0.22em" }}>
               Get in Touch
