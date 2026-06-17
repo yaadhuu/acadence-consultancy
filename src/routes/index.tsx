@@ -289,7 +289,7 @@ function Index() {
                   {...(row.external ? { target: "_blank", rel: "noreferrer" } : {})}
                   className={`group grid grid-cols-1 items-center gap-1 border-t py-[18px] transition-all duration-200 md:grid-cols-[140px_1fr_auto] md:gap-6 ${
                     i === 2 ? "border-b" : ""
-                  } border-l-[3px] border-l-transparent hover:border-l-gold hover:pl-4`}
+                  } border-l-[3px] border-l-transparent hover:border-l-gold`}
                   style={{ borderTopColor: "rgba(212,175,55,0.15)", ...(i === 2 ? { borderBottomColor: "rgba(212,175,55,0.15)" } : {}) }}
                 >
                   <span
