@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 import logoAsset from "@/assets/acadence-logo.asset.json";
 import heroAsset from "@/assets/hero-academic-v2.asset.json";
+import { Reveal } from "@/components/Reveal";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -41,10 +42,10 @@ const pillars = [
 ];
 
 const trustItems = [
-  { icon: Scale, label: "Academic Integrity Assured" },
-  { icon: Award, label: "Subject-Matter Specialists" },
-  { icon: Clock3, label: "Strict Deadline Adherence" },
-  { icon: Lock, label: "Discreet & Confidential" },
+  { icon: ShieldCheck, label: "Academic Integrity Assured", tone: "navy" as const },
+  { icon: Briefcase, label: "Subject-Matter Specialists", tone: "gold" as const },
+  { icon: Clock3, label: "Strict Deadline Adherence", tone: "navy" as const },
+  { icon: Lock, label: "Discreet & Confidential", tone: "gold" as const },
 ];
 
 function Index() {
@@ -145,15 +146,28 @@ function Index() {
 
       {/* TRUST STRIP */}
       <section className="border-y border-border bg-offwhite">
-        <div className="container-prose grid gap-8 py-10 md:grid-cols-2 lg:grid-cols-4 md:py-12">
-          {trustItems.map(({ icon: Icon, label }) => (
-            <div key={label} className="flex items-center justify-center gap-4 text-center md:justify-start md:text-left">
-              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-gold/12 text-gold">
-                <Icon className="h-5 w-5" strokeWidth={1.5} />
-              </span>
-              <p className="font-serif text-lg text-navy">{label}</p>
-            </div>
-          ))}
+        <div className="container-prose grid gap-5 py-10 sm:grid-cols-2 lg:grid-cols-4 md:py-12">
+          {trustItems.map(({ icon: Icon, label, tone }, i) => {
+            const isNavy = tone === "navy";
+            return (
+              <Reveal
+                key={label}
+                delay={i * 120}
+                className={`flex flex-col items-center gap-4 rounded-xl border p-5 text-center transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-card)] ${
+                  isNavy ? "border-navy/10 bg-card" : "border-gold/20 bg-gold/[0.06]"
+                }`}
+              >
+                <span
+                  className={`grid h-14 w-14 shrink-0 place-items-center rounded-full ${
+                    isNavy ? "bg-navy/8 text-navy" : "bg-navy text-gold"
+                  }`}
+                >
+                  <Icon className="h-7 w-7" strokeWidth={1.5} />
+                </span>
+                <p className="font-serif text-lg text-navy">{label}</p>
+              </Reveal>
+            );
+          })}
         </div>
       </section>
 
@@ -172,10 +186,12 @@ function Index() {
           </div>
 
           <div className="mt-16 grid gap-6 md:grid-cols-2">
-            {services.map(({ icon: Icon, title, desc }) => (
-              <article
+            {services.map(({ icon: Icon, title, desc }, i) => (
+              <Reveal
+                as="article"
                 key={title}
-                className="group relative overflow-hidden rounded-xl border border-border bg-card p-8 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-[var(--shadow-card-hover)]"
+                delay={(i % 2) * 120}
+                className="group relative overflow-hidden rounded-xl border border-border bg-card p-8 shadow-[var(--shadow-card)] hover:-translate-y-1 hover:border-gold/40 hover:shadow-[var(--shadow-card-hover)]"
               >
                 <div className="absolute inset-x-0 top-0 h-[2px] origin-left scale-x-0 bg-gold transition-transform duration-500 group-hover:scale-x-100" />
                 <div className="flex items-start gap-5">
@@ -187,7 +203,7 @@ function Index() {
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc}</p>
                   </div>
                 </div>
-              </article>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -205,17 +221,19 @@ function Index() {
           </div>
 
           <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {pillars.map(({ icon: Icon, title, desc }) => (
-              <article
+            {pillars.map(({ icon: Icon, title, desc }, i) => (
+              <Reveal
+                as="article"
                 key={title}
-                className="relative rounded-xl border border-border bg-card p-8 text-center shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[var(--shadow-card-hover)]"
+                delay={i * 140}
+                className="relative rounded-xl border border-border bg-card p-8 text-center shadow-[var(--shadow-card)] hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[var(--shadow-card-hover)]"
               >
                 <span className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-navy text-gold">
                   <Icon className="h-8 w-8" strokeWidth={1.3} />
                 </span>
                 <h3 className="mt-6 font-serif text-xl font-bold text-navy">{title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-navy/70">{desc}</p>
-              </article>
+              </Reveal>
             ))}
           </div>
         </div>
