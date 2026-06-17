@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import {
   BookOpen, FileText, GraduationCap, Library, Microscope,
-  PenLine, ShieldCheck, Clock3, Scale, Award, Briefcase,
+  PenLine, ShieldCheck, Clock3, Briefcase,
   Search, Shield, Lock, Mail, Linkedin, MessageCircle, ArrowRight,
 } from "lucide-react";
 import logoAsset from "@/assets/acadence-logo.asset.json";
