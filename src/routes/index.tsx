@@ -2,8 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import {
   BookOpen, FileText, GraduationCap, Library, Microscope,
-  PenLine, ShieldCheck, Clock3, Scale, Award, CheckCircle2,
-  Lock, Mail, Linkedin, MessageCircle, ArrowRight,
+  PenLine, ShieldCheck, Clock3, Scale, Award, Briefcase,
+  Search, Shield, Lock, Mail, Linkedin, MessageCircle, ArrowRight,
 } from "lucide-react";
 import logoAsset from "@/assets/acadence-logo.asset.json";
 import heroAsset from "@/assets/hero-academic-v2.asset.json";
@@ -34,9 +34,9 @@ const services = [
 ];
 
 const pillars = [
-  { icon: Award, title: "Sustained Expertise", desc: "7+ years of dedicated academic support across diverse disciplines." },
-  { icon: CheckCircle2, title: "Rigorous Quality Control", desc: "Every manuscript undergoes thorough peer-level editorial review." },
-  { icon: Scale, title: "Ethical Practice", desc: "Bespoke consultancy strictly authored to your brief, never resold." },
+  { icon: Briefcase, title: "Sustained Expertise", desc: "7+ years of dedicated academic support across diverse disciplines." },
+  { icon: Search, title: "Rigorous Quality Control", desc: "Every manuscript undergoes thorough peer-level editorial review." },
+  { icon: Shield, title: "Ethical Practice", desc: "Bespoke consultancy strictly authored to your brief, never resold." },
   { icon: Lock, title: "Protected Privacy", desc: "Your identity, institutional affiliation, and data remain strictly confidential." },
 ];
 
@@ -204,18 +204,17 @@ function Index() {
             </h2>
           </div>
 
-          <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {pillars.map(({ icon: Icon, title, desc }) => (
               <article
                 key={title}
-                className="relative rounded-xl border border-border bg-card p-10 text-center shadow-[var(--shadow-card)] transition-shadow hover:shadow-[var(--shadow-card-hover)]"
+                className="relative rounded-xl border border-border/60 bg-navy-tint p-8 text-center shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[var(--shadow-card-hover)]"
               >
-                <span className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-navy text-gold">
-                  <Icon className="h-7 w-7" strokeWidth={1.4} />
+                <span className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-navy/8 text-navy">
+                  <Icon className="h-12 w-12" strokeWidth={1.3} />
                 </span>
-                <h3 className="mt-6 font-serif text-xl text-navy">{title}</h3>
-                <span className="mx-auto mt-4 block h-px w-10 bg-gold" />
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+                <h3 className="mt-6 font-serif text-xl font-bold text-navy">{title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{desc}</p>
               </article>
             ))}
           </div>
