@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Acadence — Advancing Academic Research & Scholarship" },
-      { name: "description", content: "Bespoke consultancy, structural editing, and research support for scholars worldwide. Backed by 7 years of rigorous academic practice." },
+      { name: "description", content: "Bespoke consultancy, structural editing, and research support for scholars worldwide. Backed by 7+ years of academic excellence and research-driven expertise." },
       { property: "og:title", content: "Acadence — Advancing Academic Research & Scholarship" },
       { property: "og:description", content: "Bespoke consultancy, structural editing, and research support for scholars worldwide." },
       { property: "og:image", content: logoAsset.url },
@@ -109,7 +109,7 @@ function Index() {
               Bespoke consultancy, structural editing, and research support for scholars worldwide.
             </p>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Backed by 7 years of rigorous academic practice.
+              Backed by 7+ years of academic excellence and research-driven expertise
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-5">
               <a
