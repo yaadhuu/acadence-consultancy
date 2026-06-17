@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import {
   BookOpen, FileText, GraduationCap, Library, Microscope,
   PenLine, ShieldCheck, Clock3, Briefcase,
-  Search, Shield, Lock, Mail, Linkedin, MessageCircle, ArrowRight,
+  Search, Shield, Lock, ArrowRight,
 } from "lucide-react";
 import logoAsset from "@/assets/acadence-logo.asset.json";
 import heroAsset from "@/assets/hero-academic-v2.asset.json";
