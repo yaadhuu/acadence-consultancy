@@ -244,21 +244,21 @@ function Index() {
 
             <div className="mt-12 grid gap-4 sm:grid-cols-3">
               <a
-                href="https://wa.me/"
-                className="group inline-flex h-14 items-center justify-center gap-3 rounded-md bg-[#25D366] px-6 text-sm font-semibold text-white shadow-[0_10px_30px_-10px_rgba(37,211,102,0.6)] transition-transform hover:-translate-y-0.5"
+                href="https://wa.me/918078578102"
+                className="group inline-flex h-14 min-h-[48px] items-center justify-center gap-3 rounded-lg bg-[#25D366] px-6 text-sm font-semibold text-white shadow-[0_10px_30px_-10px_rgba(37,211,102,0.6)] transition-all duration-300 hover:brightness-110 hover:shadow-[0_14px_36px_-10px_rgba(37,211,102,0.7)]"
               >
                 <MessageCircle className="h-5 w-5" /> WhatsApp
               </a>
               <a
                 href="https://linkedin.com/in/yadhu-krishna-6424972bb"
                 target="_blank" rel="noreferrer"
-                className="group inline-flex h-14 items-center justify-center gap-3 rounded-md bg-[#0A66C2] px-6 text-sm font-semibold text-white shadow-[0_10px_30px_-10px_rgba(10,102,194,0.6)] transition-transform hover:-translate-y-0.5"
+                className="group inline-flex h-14 min-h-[48px] items-center justify-center gap-3 rounded-lg bg-[#0A66C2] px-6 text-sm font-semibold text-white shadow-[0_10px_30px_-10px_rgba(10,102,194,0.6)] transition-all duration-300 hover:brightness-110 hover:shadow-[0_14px_36px_-10px_rgba(10,102,194,0.7)]"
               >
                 <Linkedin className="h-5 w-5" /> LinkedIn
               </a>
               <a
                 href="mailto:yeadhukrishna.p@gmail.com"
-                className="group inline-flex h-14 items-center justify-center gap-3 rounded-md border border-gold px-6 text-sm font-semibold text-gold transition-all hover:bg-gold hover:text-navy"
+                className="group inline-flex h-14 min-h-[48px] items-center justify-center gap-3 rounded-lg bg-[#6B7280] px-6 text-sm font-semibold text-white shadow-[0_10px_30px_-10px_rgba(107,114,128,0.5)] transition-all duration-300 hover:brightness-110 hover:shadow-[0_14px_36px_-10px_rgba(107,114,128,0.6)]"
               >
                 <Mail className="h-5 w-5" /> Email
               </a>
